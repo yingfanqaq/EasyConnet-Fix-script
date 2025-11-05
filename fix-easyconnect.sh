@@ -27,7 +27,7 @@ while read -r destination gateway; do
   # 保留:
   # 1. 10.x.x.x (例如 10.16.114.50)
   # 2. 172.16.x.x - 172.31.x.x (例如 172.18.28.63)
-  # 3. 192.168.x.x (你的本地网络)
+  # 3. 192.168.x.x (本地网络)
   if echo "$destination" | grep -E -q "^10(\.|/|$)" || \
      echo "$destination" | grep -E -q "^172\.(1[6-9]|2[0-9]|3[0-1])(\.|/|$)" || \
      echo "$destination" | grep -E -q "^192\.168(\.|/|$)"; then
